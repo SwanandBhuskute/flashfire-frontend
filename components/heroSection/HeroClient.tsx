@@ -27,22 +27,22 @@ interface Props {
 
 const HeroClient: React.FC<Props> = ({ data, countdownData }) => {
   return (
-    <section className={styles.section}>
+    <section className={styles.heroContainer}>
       <CountdownClient data={countdownData} />
 
-      <div className={styles.badge}>{data.badgeText}</div>
+      <div className={styles.heroBadge}>{data.badgeText}</div>
 
-      <h1 className={styles.title}>
+      <h1 className={styles.heroTitle}>
         {data.titleLine1}
         <br />
-        <span className={styles.highlight}>{data.titleLine2}</span>
+        <span className={styles.heroHighlight}>{data.titleLine2}</span>
       </h1>
 
-      <p className={styles.desc}>{data.description}</p>
+      <p className={styles.heroDesc}>{data.description}</p>
 
-      <button className={styles.btn}>{data.buttonText}</button>
+      <button className={styles.heroBtn}>{data.buttonText}</button>
 
-      <div className={styles.scroll}>⬇</div>
+      <div className={styles.heroScroll}>↓</div>
     </section>
   );
 };

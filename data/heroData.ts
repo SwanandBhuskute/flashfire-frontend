@@ -11,6 +11,6 @@ export const heroData: HeroData = {
   titleLine1: "Land 15+ Interview Calls with Us",
   titleLine2: "Powered by Flashfire AI.",
   description:
-    "We apply to 1,200+ USA jobs and track everything — so you can focus on interviews.",
+    "We apply to 1,200+ USA jobs and track everything - so you can focus on interviews.",
   buttonText: "Get me interview →",
 };

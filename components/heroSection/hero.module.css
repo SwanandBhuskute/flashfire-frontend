@@ -1,44 +1,45 @@
-.section {
+.heroContainer {
   text-align: center;
-  padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding-top: 10rem; /* space for navbar + countdown */
+  padding-bottom: 1rem;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #fffaf6, #fff4ee);
+  background: linear-gradient(to bottom, #f9f9f9, #e7e1de);
 }
 
-.badge {
+/* badge */
+.heroBadge {
   display: inline-block;
   background-color: #ffe9da;
-  color: #ff3d00;
+  color: #984104;
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
   font-size: 0.9rem;
   font-weight: 600;
-  margin-top: 3rem;
 }
 
-.title {
-  font-size: 3rem;
+/* heading */
+.heroTitle {
+  font-size: 3.8rem;
   font-weight: 700;
   color: #111;
   margin-top: 2rem;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
-.highlight {
-  color: #ff3d00;
+.heroHighlight {
+  color: #ea580c;
 }
 
-.desc {
-  color: #444;
-  font-size: 1.1rem;
-  max-width: 40rem;
+/* paragraph */
+.heroDesc {
+  color: #111;
+  font-size: 1.5rem;
   margin: 2rem auto;
-  line-height: 1.6;
 }
 
-.btn {
-  background-color: #ff3d00;
+/* button */
+.heroBtn {
+  background-color: #f97316;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -49,18 +50,19 @@
   transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #ff5722;
+.heroBtn:hover {
+  background-color: #ea580c;
 }
 
-.scroll {
+/* scroll icon */
+.heroScroll {
   font-size: 2rem;
-  color: #ff3d00;
+  color: #f97316;
   margin-top: 3rem;
-  animation: bounce 1.2s infinite;
+  animation: heroBounce 1.2s infinite;
 }
 
-@keyframes bounce {
+@keyframes heroBounce {
   0%,
   100% {
     transform: translateY(0);
@@ -70,18 +72,18 @@
   }
 }
 
-/* ✅ Responsive */
+/* responsive */
 @media (max-width: 48em) {
-  .title {
+  .heroTitle {
     font-size: 2.2rem;
   }
 
-  .desc {
+  .heroDesc {
     font-size: 1rem;
     padding: 0 1rem;
   }
 
-  .btn {
+  .heroBtn {
     font-size: 1rem;
     padding: 0.8rem 1.6rem;
   }

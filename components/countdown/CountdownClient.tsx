@@ -35,15 +35,34 @@ const CountdownClient: React.FC<Props> = ({ data }) => {
   }, [data.secs]);
 
   return (
-    <div className={styles.container}>
-      <p>Hurry! {data.slotsLeft} Slots Remaining</p>
-      <div className={styles.timeBox}>
-        <span>{time.days} Days</span>
-        <span>{time.hours} Hrs</span>
-        <span>{time.mins} Mins</span>
-        <span>{time.secs} Secs</span>
+    <div className={styles.ctdContainer}>
+      <div className={styles.ctdLeft}>
+        <div className={styles.ctdDot}></div>
+        <p className={styles.ctdText}>
+          Hurry! {data.slotsLeft} Slots Remaining
+        </p>
       </div>
-      <button className={styles.bookBtn}>{data.bookNowText}</button>
+
+      <div className={styles.ctdTimeBox}>
+        <div className={styles.ctdTimer}>
+          <span className={styles.ctdValue}>{time.days}</span>
+          <span className={styles.ctdLabel}>Days</span>
+        </div>
+        <div className={styles.ctdTimer}>
+          <span className={styles.ctdValue}>{time.hours}</span>
+          <span className={styles.ctdLabel}>Hrs</span>
+        </div>
+        <div className={styles.ctdTimer}>
+          <span className={styles.ctdValue}>{time.mins}</span>
+          <span className={styles.ctdLabel}>Mins</span>
+        </div>
+        <div className={styles.ctdTimer}>
+          <span className={styles.ctdValue}>{time.secs}</span>
+          <span className={styles.ctdLabel}>Secs</span>
+        </div>
+      </div>
+
+      <button className={styles.ctdBtn}>{data.bookNowText}</button>
     </div>
   );
 };

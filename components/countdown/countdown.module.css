@@ -1,54 +1,116 @@
-.container {
-  background-color: #ff3d00;
-  color: white;
+.ctdContainer {
+  position: fixed;
+  top: 4rem; /* below navbar */
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #f97316, #ea580c);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  font-size: 0.95rem;
+  padding: 0.4rem 2rem;
   font-weight: 600;
-  padding: 0.8rem 2rem;
+  z-index: 9;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.05);
   flex-wrap: wrap;
 }
 
-.timeBox {
+/* left text + dot */
+.ctdLeft {
   display: flex;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.6rem 1rem;
-  border-radius: 1rem;
+  align-items: center;
+  gap: 0.8rem;
+  color: white;
 }
 
-.bookBtn {
+.ctdDot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+.ctdText {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* timer section */
+.ctdTimeBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ctdTimer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.6rem;
+  min-width: 3.5rem;
+}
+
+.ctdValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ctdLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* button */
+.ctdBtn {
   background: white;
-  color: #ff3d00;
+  color: #c1121f;
   border: none;
   border-radius: 2rem;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
 }
 
-.bookBtn:hover {
+.ctdBtn:hover {
   transform: scale(1.05);
 }
 
-/* ✅ Responsive */
+/* responsive */
 @media (max-width: 48em) {
-  .container {
+  .ctdContainer {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
-    font-size: 0.9rem;
   }
 
-  .timeBox {
-    gap: 0.8rem;
+  .ctdLeft {
+    justify-content: center;
   }
 
-  .bookBtn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
+  .ctdTimeBox {
+    justify-content: center;
   }
 }
