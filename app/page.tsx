@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar/Navbar";
-import HeroSection from "@/components/heroSection/HeroSection";
-import Countdown from "@/components/countdown/Countdown";
+import Navbar from "@/src/components/navbar/Navbar";
+import HeroSection from "@/src/components/heroSection/HeroSection";
+import Countdown from "@/src/components/countdown/Countdown";
 
 export default function HomePage() {
   return (

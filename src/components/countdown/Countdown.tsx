@@ -1,5 +1,5 @@
 import CountdownClient from "./CountdownClient";
-import { countdownData } from "@/data/countdownData";
+import { countdownData } from "@/src/data/countdownData";
 
 export default async function Countdown() {
   return <CountdownClient data={countdownData} />;
