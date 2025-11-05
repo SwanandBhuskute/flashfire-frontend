@@ -10,6 +10,6 @@
 
 ```bash
 git clone https://github.com/SwanandBhuskute/flashfire-frontend.git
-cd flashfire-landing
+cd flashfire-frontend
 npm install
 npm run dev
